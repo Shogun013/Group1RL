@@ -53,7 +53,6 @@ header.scrolled {
     transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-
 .logo {
     color: white;
     text-decoration: none;
@@ -99,7 +98,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -136,6 +134,21 @@ nav ul li a:hover {
     margin: 50px auto;
     width: 60%;
     border-radius: 10px;
+    text-align: center;
+}
+
+#noli-intro h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#noli-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
 }
 
 /* Buttons */
@@ -213,20 +226,6 @@ footer {
     width: 60%;
     border-radius: 10px;
     text-align: center;
-}
-
-#noli-intro h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 20px;
-}
-
-#noli-intro p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
 }
 
 /* 📌 Smooth fade-in effect */
@@ -430,6 +429,7 @@ footer {
     color: #333;
 }
 
+/* Text content styling */
 .bio-text p, 
 .bio-text ul {
     color: #666;
@@ -683,34 +683,7 @@ nav ul li:nth-child(6) { animation-delay: 0.6s; }
     font-size: 1.1rem;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 1024px) {
-    .members-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .members-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .member-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .member-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .member-info .role {
-        font-size: 1rem;
-    }
-}
-
+/* Analysis Page Specific Styling */
 .context-text {
     text-align: left;
     padding: 20px 0;
