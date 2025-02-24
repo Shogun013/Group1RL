@@ -1,0 +1,712 @@
+/* Import classic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-left: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+    transform: translateY(-2px);
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('rizal-monument.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 180px 50px;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    max-width: 80%;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Introduction Section */
+#noli-intro {
+    padding: 80px 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.light {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn.light:hover {
+    background: white;
+    color: black;
+}
+
+.btn.dark {
+    background: #ff4500;
+    color: white;
+    border: none;
+}
+
+.btn.dark:hover {
+    background: white;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+}
+
+/* Smooth fade-in animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer-shape {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: black;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    margin-top: 60px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    position: relative;
+    margin-top: -20px;
+}
+
+/* 📖 Styling for Noli Me Tangere Section */
+#noli-intro {
+    padding: 80px 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#noli-intro h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#noli-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* 📌 Smooth fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🎨 Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.dark {
+    background: #ff4500;
+    color: white;
+    border: none;
+}
+
+.btn.dark:hover {
+    background: white;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+}
+
+/* 📖 General Content Layout */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 10%;
+}
+
+/* Left Side (Text) */
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Right Side (Image) */
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📜 Biography Section */
+#biography {
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+#biography h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+    padding: 2rem;
+    text-align: left;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.bio-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #222;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+.bio-text p, 
+.bio-text ul {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+    font-family: 'Lora', serif;
+}
+
+.bio-text strong {
+    color: #222;
+    font-weight: 600;
+}
+
+/* Carousel Card Improvements */
+.bio-card {
+    padding: 2rem;
+}
+
+.card-content {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #biography h2 {
+        font-size: 2rem;
+    }
+
+    .bio-text {
+        padding: 1.5rem;
+    }
+
+    .bio-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .bio-text p, 
+    .bio-text ul {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+}
+
+/* 🎨 Biography Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 85%;
+    margin: 2rem auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%;
+    position: relative;
+    left: 0;
+}
+
+.bio-card {
+    flex: 0 0 25%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.card-content {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Fixed image scaling */
+.bio-card img {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: contain; /* Maintains aspect ratio without cropping */
+    background: #f5f5f5; /* Light background for images */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Text content styling */
+.bio-text {
+    padding: 2rem;
+    text-align: center;
+}
+
+.bio-text h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.bio-text p, 
+.bio-text ul {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Modern Navigation Styles */
+.main-nav {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        margin-right: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;  /* Increased gap between items */
+        z-index: 999;
+        padding: 40px 0;  /* Added vertical padding */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0.5rem 0;  /* Added margin */
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        width: 80%;  /* Made buttons slightly wider */
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+    /* Hero Section Mobile Adjustments */
+    .hero h2 {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Close button for mobile menu */
+    .menu-toggle.active {
+        position: fixed;
+        right: 1rem;
+        z-index: 1000;
+    }
+}
+
+/* Animation for menu items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation delays for menu items */
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.2s; }
+nav ul li:nth-child(3) { animation-delay: 0.3s; }
+nav ul li:nth-child(4) { animation-delay: 0.4s; }
+nav ul li:nth-child(5) { animation-delay: 0.5s; }
+nav ul li:nth-child(6) { animation-delay: 0.6s; }
+
+/* Add balanced spacing around members section */
+#members {
+    margin-bottom: 60px;  /* Bottom space */
+    margin-right: 60px;   /* Right space */
+    padding-bottom: 40px; /* Internal bottom padding */
+    padding-right: 40px;  /* Internal right padding */
+}
+
+/* Responsive adjustments for members section */
+@media (max-width: 768px) {
+    #members {
+        margin-right: 30px;   /* Reduced right margin for tablets */
+        padding-right: 20px;  /* Reduced right padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #members {
+        margin-right: 20px;   /* Further reduced right margin for mobile */
+        padding-right: 15px;  /* Further reduced right padding for mobile */
+        margin-bottom: 40px;  /* Adjusted bottom margin for mobile */
+        padding-bottom: 30px; /* Adjusted bottom padding for mobile */
+    }
+}
+
+/* Members Page Styles */
+.members-section {
+    padding: 80px 20px;
+    background: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.members-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 20px;
+}
+
+.member-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 1rem;
+}
+
+.member-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.member-info .role {
+    font-family: 'Lora', serif;
+    color: #666;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .member-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .member-info .role {
+        font-size: 1rem;
+    }
+}
